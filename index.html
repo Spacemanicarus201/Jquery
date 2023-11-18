@@ -1,91 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
-    <html lang="en">
-        <head>
-            <meta charset="UTF-8">
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <title>Login Page</title>
-            <link rel="stylesheet" href="Styles.css">
-            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-            <style>
-                body, html {
-                    margin: 0;
-                    padding: 0;
-                }
-                body {
-                    font-family: Arial, sans-serif;
-                    background: linear-gradient(45deg, #2980b9, #6dd5fa);
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    height: 100vh;
-                }
-                .card {
-                    background-color: #fff;
-                    border-radius: 10px;
-                    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
-                    text-align: center;
-                    padding: 30px;
-                    width: 350px;
-                }
-                .card h1 {
-                    color: #007BFF;
-                    margin-bottom: 30px;
-                }
-                .form-group {
-                    margin: 15px 0;
-                }
-                .form-group label {
-                    text-align: left;
-                    font-weight: bold;
-                }
-                .form-group input {
-                    padding: 10px;
-                    border: 1px solid #ccc;
-                    border-radius: 5px;
-                    width: 100%;
-                }
-                .btn-container {
-                    margin: 20px 0;
-                }
-                .btn-container button {
-                    padding: 10px 20px;
-                    background-color: #007BFF;
-                    color: #fff;
-                    border: none;
-                    border-radius: 5px;
-                    cursor: pointer;
-                }
-                .btn-container button:hover {
-                    background-color: #0056b3;
-                }
-                .error {
-                    color: #ff3b30;
-                    margin-top: 10px;
-                }
-                .navbar {
-                    background: rgba(255, 255, 255, 0.1);
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    right: 0;
-                }
-                .navbar-logo {
-                    padding: 15px;
-                }
-                .navbar-logo h1 {
-                    color: #fff;
-                }
-            </style>
-        </head>
-        <body>
-            <div class="container">
-                <div class="card">
-                    <h1 class="text-center text-success">Welcome to Sabuk Hitam</h1>
-                    <p class="text-center">Please Validate Your Identity</p>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="Styles.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(45deg, #2980b9, #6dd5fa);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .card {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            padding: 30px;
+            width: 350px;
+        }
+        .card h1 {
+            color: #007BFF;
+            margin-bottom: 30px;
+        }
+        .form-group {
+            margin: 15px 0;
+        }
+        .form-group label {
+            text-align: left;
+            font-weight: bold;
+        }
+        .form-group input {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 100%;
+        }
+        .btn-container {
+            margin: 20px 0;
+        }
+        .btn-container button {
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .btn-container button:hover {
+            background-color: #0056b3;
+        }
+        .error {
+            color: #ff3b30;
+            margin-top: 10px;
+        }
+        .navbar {
+            background: rgba(255, 255, 255, 0.1);
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+        }
+        .navbar-logo {
+            padding: 15px;
+        }
+        .navbar-logo h1 {
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <h1 class="text-center text-success">Welcome to Sabuk Hitam</h1>
+            <p class="text-center">Please Validate Your Identity</p>
+            <form>
                     <form>
                         <div class="form-group">
                             <label for="usernames">Username:</label>
@@ -113,12 +113,17 @@
                             <button type="submit" id="submitbtn" class="btn btn-primary">Submit</button>
                         </div>
                     </form>
+                    <a href="FAQ.html" target="_blank">
+                        <button style="padding: 10px 20px; font-size: 16px; cursor: pointer;">
+                           FAQ web
+                        </button>
+                    </a>
+                    
                 </div>
             </div>
-        
             <script src="app.js"></script>
         </body>
-    <script>
+        <script>
     
 $(document).ready(function () {
 

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Gallery</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .gallery {
+            max-width: 800px;
+            margin: 20px auto;
+        }
+
+        .filter {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .filter-button {
+            padding: 10px 20px;
+            margin: 5px;
+            cursor: pointer;
+            border: 1px solid #ccc;
+            background-color: #f5f5f5;
+        }
+
+        .photos {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .photo {
+            width: 33.33%;
+            padding: 10px;
+            box-sizing: border-box;
+            transition: opacity 0.3s ease-in-out;
+        }
+
+        .photo img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(".photo").show();
+
+            $(".filter-button").click(function () {
+                var filter = $(this).data("filter");
+
+                if (filter === "all") {
+                    $(".photo").show();
+                } else {
+                    $(".photo").hide();
+                    $("." + filter).show();
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+
+<div class="gallery">
+    <div class="filter">
+        <button class="filter-button" data-filter="all">All</button>
+        <button class="filter-button" data-filter="nature">Nature</button>
+        <button class="filter-button" data-filter="city">City</button>
+        <button class="filter-button" data-filter="food">Food</button>
+    </div>
+
+    <div class="photos">
+        <div class="photo nature">
+            <img src="https://images.ctfassets.net/hrltx12pl8hq/28ECAQiPJZ78hxatLTa7Ts/2f695d869736ae3b0de3e56ceaca3958/free-nature-images.jpg?fit=fill&w=1200&h=630" alt="Nature Photo 1">
+        </div>
+        <div class="photo city">
+            <img src="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8fA%3D%3D" alt="City Photo 1">
+        </div>
+        <div class="photo food">
+            <img src="https://www.teenaagnel.com/wp-content/uploads/2019/12/food-photography-in-dubai.jpg" alt="Food Photo 1">
+        </div>
+        
+    </div>
+</div>
+
+</body>
+</html>
